@@ -4,7 +4,7 @@
              x:Class="CardGameInteractive.MainPage"
              Shell.NavBarIsVisible="False">
 			 
-	<Label Text="Interactive Card Game Exercise Startup Template"
+	<Label Text="Interactive Card Game Template"
 	       VerticalOptions="Center"
 	       HorizontalOptions="Center"/> 
 </ContentPage>
