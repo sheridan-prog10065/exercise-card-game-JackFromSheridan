@@ -2,6 +2,7 @@ namespace CardGameInteractive;
 
 public class CardGame
 {
+    #region Fields
     //Represents the deck of card the game will use.
     private CardDeck _cardDeck;
     
@@ -13,7 +14,9 @@ public class CardGame
     
     //Last card played by the house.
     private Card _houseCard;
+    #endregion Fields
     
+    #region Constructors
     //Constructor of the "CardGame" class.
     public CardGame()
     {
@@ -22,7 +25,66 @@ public class CardGame
         _playerCard = null;
         _houseCard = null;
     }
+    
+    #endregion Constructors
 
+
+    #region Properties
+    public Score Score
+    {
+        get
+        {
+            return _score;
+        }
+        
+        set
+        {
+            _score = value;
+        }
+    }
+
+    public Card PlayerCard
+    {
+        get
+        {
+            return _playerCard;
+        }
+    }
+
+    public Card HouseCard
+    {
+        get
+        {
+            return _houseCard;
+        }
+    }
+
+    public bool IsOver
+    {
+        get
+        {
+            return _cardDeck.CardCount < 2;
+        }
+    }
+
+    public bool PlayerWins
+    {
+        get
+        {
+            return this.IsOver && (_score.PlayerScore > _score.HouseScore);
+        }
+    }
+
+    public bool HouseWins
+    {
+        get
+        {
+            return this.IsOver && (_score.HouseScore > _score.PlayerScore);
+        }
+    }
+    
+    #endregion Properties
+    
     //Plays the game.
     public void Play()
     {

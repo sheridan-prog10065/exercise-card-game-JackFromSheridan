@@ -4,8 +4,8 @@ namespace CardGameInteractive;
 
 public enum CardSuit
 {
-    //
-    Diamnods = 1,
+    //All possible card suits. (Diamonds = 1, Clubs = 2, Hearts = 3, Spades = 4)
+    Diamonds = 1,
     Clubs,
     Hearts,
     Spades,

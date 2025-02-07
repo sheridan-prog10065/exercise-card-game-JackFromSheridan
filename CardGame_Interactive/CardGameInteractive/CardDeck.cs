@@ -9,5 +9,19 @@ public class CardDeck
     {
         _cardList = new List<Card>();
     }
+
+    /// <summary>
+    /// Read-only property that returns the number of cards in the deck.
+    /// </summary>
+    public int CardCount
+    {
+        get
+        {
+            return _cardList.Count;
+        }
+    }
+    
+    
+    
     
 }
