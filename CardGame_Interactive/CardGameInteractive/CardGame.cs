@@ -21,6 +21,7 @@ public class CardGame
     public CardGame()
     {
         _cardDeck = new CardDeck();
+        _cardDeck.ShuffleCards();
         _score = new Score();
         _playerCard = null;
         _houseCard = null;
@@ -83,7 +84,7 @@ public class CardGame
         }
     }
     
-    #endregion Properties
+    #endregion
     
     //Plays the game.
     public void Play()
@@ -97,19 +98,21 @@ public class CardGame
     /// 0: Tie
     /// -1: House wins
     /// </returns>
-    private sbyte PlayRound()
+    public sbyte PlayRound()
     {
+        byte cardRank;
+        byte houseRank;
         return 0;
     }
 
     
     //Give cards to the House and the User.
-    private void DealCards()
+    public void DealCards()
     {
         
     }
 
-    private void SwitchCards()
+    public void SwitchCards()
     {
         
     }
