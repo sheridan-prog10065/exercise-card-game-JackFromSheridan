@@ -64,7 +64,7 @@ public class Card
         }
     }
 
-    public string SuiteName
+    public string SuitName
     {
         get
         {
