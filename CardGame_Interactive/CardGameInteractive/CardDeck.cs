@@ -77,10 +77,44 @@ public class CardDeck
         }
         
     }
+    
+    /// <summary>
+    /// Extracts two random cards from the deck
+    /// </summary>
+    /// <param name="cardOne"> first card output</param>
+    /// <param name="cardTwo"> second card output</param>
+    /// <returns>true if the extraction is possible, false if there's no cards left</returns>
 
     public bool GetPairOfCards(out Card cardOne, out Card cardTwo)
     {
+        //check that there's enough cards in the deck
+        if (_cardList.Count >= 2)
+        {
+            //extract the first card
+            //generate a random position to extract the card from
+            int randPos = CardDeck.Randomizer.Next(_cardList.Count);
+            
+            //access the card at the random index
+            cardOne = _cardList[randPos];
+            
+            //remove the card from the deck
+            _cardList.RemoveAt(randPos);
+            
+            //extract the second card
+            randPos = CardDeck.Randomizer.Next(_cardList.Count);
+            cardTwo = _cardList[randPos];
+            _cardList.RemoveAt(randPos);
+            
+            //Indicate success of the extraction
+            return true;
+        }
         
+    }
+
+    public void ExchangeCards(ref Card cardOne, ref Card cardTwo)
+    {
+        //swap the two cards using tuple deconstruction
+        (cardOne, cardTwo) = (cardTwo, cardOne);
     }
     
 }

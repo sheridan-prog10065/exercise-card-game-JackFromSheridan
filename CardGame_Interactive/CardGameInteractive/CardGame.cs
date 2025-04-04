@@ -1,3 +1,5 @@
+using System.Diagnostics;
+
 namespace CardGameInteractive;
 
 public class CardGame
@@ -109,12 +111,16 @@ public class CardGame
     //Give cards to the House and the User.
     public void DealCards()
     {
+        //extract two cards from the deck and assign them to the player and the house
+        bool cardsDealt = _cardDeck.GetPairOfCards(out _playerCard, out _houseCard);
+        Debug.Assert(cardsDealt, "Cards could not be dealt. Check the game is not over");
         
     }
 
     public void SwitchCards()
     {
-        
+        //Ask the Card Deck to swap the player and house cards
+        _cardDeck.ExchangeCards(ref _playerCard, ref _houseCard);
     }
 
     private byte DetermineCardRank()
