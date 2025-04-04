@@ -77,5 +77,10 @@ public class CardDeck
         }
         
     }
+
+    public bool GetPairOfCards(out Card cardOne, out Card cardTwo)
+    {
+        
+    }
     
 }
