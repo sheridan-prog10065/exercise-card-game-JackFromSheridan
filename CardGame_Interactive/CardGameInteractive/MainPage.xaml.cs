@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using CardGameLib;
 
 namespace CardGameInteractive;
 
@@ -25,8 +26,8 @@ public partial class MainPage : ContentPage
     private void OnDealCards(object sender, EventArgs e)
     {
         //ensure the cards being dealt are turned face down
-        _imgPlayerCard.Source = s_imageSourceCardBack.FromFile("cardBack_blue.png");
-        _imgHouseCard.Source = s_imageSourceCardBack.FromFile("ardBack_blue.png");
+        _imgPlayerCard.Source = s_imageSourceCardBack;
+        _imgHouseCard.Source = s_imageSourceCardBack;
         
         //Ask game object to deal cards to the player and the dealer
         _cardGame.DealCards();
@@ -100,11 +101,11 @@ public partial class MainPage : ContentPage
 
     }
 
-    private void ShowCard(Image imageControl, Card cardGamePlayerCard)
+    private void ShowCard(Image imageControl, Card card)
     {
         //Determine the image source for player and house cards based on the card value and suit
         char suitId = card.Suit.ToString()[0];
-        string fileName = $"{suitId}{card.Value.ToString(format:"00")}.png"
+        string fileName = $"{suitId}{card.Value.ToString(format: "00")}.png";
 
         //Set the image source
         imageControl.Source = ImageSource.FromFile(fileName);

@@ -108,6 +108,12 @@ public class CardDeck
             //Indicate success of the extraction
             return true;
         }
+        else
+        {
+            cardOne = null;
+            cardTwo = null;
+            return false;
+        }
         
     }
 
