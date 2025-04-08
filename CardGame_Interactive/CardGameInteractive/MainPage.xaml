@@ -3,8 +3,57 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CardGameInteractive.MainPage"
              Shell.NavBarIsVisible="False">
-			 
-	<Label Text="Interactive Card Game Exercise Startup Template"
-	       VerticalOptions="Center"
-	       HorizontalOptions="Center"/> 
+	
+	<Grid>
+		<Label Text="Interactive Card Game Template"
+		       VerticalOptions="Center"
+		       HorizontalOptions="Center"/>
+		
+		<Label x:Name="_txtPlayerScore"
+		      Text="Player Text"
+		      VerticalOptions="Center"
+		      HorizontalOptions="Center"/>
+		
+		<Label x:Name="_txtHouseScore"
+		       Text="House Text"
+		       VerticalOptions="Center"
+		       HorizontalOptions="Center"/>
+		
+		<Label x:Name="_txtGameBoard"
+		       Text="House Text"
+		       VerticalOptions="Center"
+		       HorizontalOptions="Center"/>
+		
+		<Image x:Name="_imgPlayerCard"
+			Source="cardBack_blue.png"
+			VerticalOptions="Center"
+			HorizontalOptions="Center"/>
+		
+		<Image x:Name="_imgHouseCard"
+		       Source="cardBack_blue.png"
+		       VerticalOptions="Center"
+		       HorizontalOptions="Center"/>
+		
+		<Button x:Name="_btnPlayCards"
+		        Text="Play"
+		        VerticalOptions="Center"
+		        HorizontalOptions="Center"/>
+		
+		<Button x:Name="_btnDealCards"
+		        Text="Deal"
+		        VerticalOptions="Center"
+		        HorizontalOptions="Center"/>
+		
+		<Button x:Name="_btnSwitchCards"
+		        Text="Switch"
+		        VerticalOptions="Center"
+		        HorizontalOptions="Center"/>
+
+
+		
+		
+		
+	</Grid>
+	
+	
 </ContentPage>
