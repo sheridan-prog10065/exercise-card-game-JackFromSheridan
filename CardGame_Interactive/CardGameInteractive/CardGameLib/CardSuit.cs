@@ -1,4 +1,4 @@
-namespace CardGameInteractive;
+namespace CardGameLib;
 
 //Defines the types of suits the cards will have.
 

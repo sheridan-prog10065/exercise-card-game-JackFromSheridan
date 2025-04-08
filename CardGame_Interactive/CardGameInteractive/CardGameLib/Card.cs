@@ -1,7 +1,7 @@
 using System.Diagnostics;
 using Debug = System.Diagnostics.Debug;
 
-namespace CardGameInteractive;
+namespace CardGameLib;
 
 //Defines the card in a card game with its value and suit
 public class Card

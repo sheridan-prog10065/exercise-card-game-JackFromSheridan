@@ -1,4 +1,4 @@
-namespace CardGameInteractive;
+namespace CardGameLib;
 
 public class CardDeck
 {
